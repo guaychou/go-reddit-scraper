@@ -10,7 +10,7 @@ type Data struct {
 func (d *Data) AddLink(link string) {
 	d.link=append(d.link,link)
 }
-func getRedditLinkImage(URL string,scraper *colly.Collector)(Data,error) {
+func GetRedditLinkImage(URL string,scraper *colly.Collector)(Data,error) {
 	data:=Data{}
 	scraper.OnHTML("img[alt='Post image']", func(e *colly.HTMLElement) {
 		data.AddLink(e.Attr("src"))
