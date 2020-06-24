@@ -22,4 +22,3 @@ func GetRedditLinkImage(URL string,scraper *colly.Collector)(Data,error) {
 	return data,nil
 }
 
-
